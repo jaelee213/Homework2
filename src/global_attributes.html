@@ -1,29 +1,52 @@
 ﻿<!DOCTYPE HTML>
-<html lang=”en”>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>Ronaldo and Messi Fan Page</title>
+	<style>
+	div.rfans {
+		color: red;
+	}
+	div.mfans {
+		color: blue;
+	}
+	#header {
+		color: yellow;
+	}
+	</style>
   </head>
   <body>
+    <h3 id="header">This is a Ronaldo/Messi fan page!</h3>
     <p>Press r if you are a Ronaldo fan!</p>
     <p>Press m if you are a Messi fan!</p>
-    <a href="https://en.wikipedia.org/wiki/Cristiano_Ronaldo" accesskey=”r”>Ronaldo</a>
-    <a href="https://en.wikipedia.org/wiki/Lionel_Messi" accesskey=”m”>Messi</a>
-    <div class=”rfans” style=”color:red”>
+    <a href="https://en.wikipedia.org/wiki/Cristiano_Ronaldo" accesskey="r">Ronaldo</a>
+    <a href="https://en.wikipedia.org/wiki/Lionel_Messi" accesskey="m">Messi</a>
+    <div class="rfans">
       <p>Ronaldo fans are like, “Ronaldo is the coolest and flashiest player ever!”</p>
       <p>Ronaldo is so intimidating and a great scorer!</p>
       <p>Not to mention very handsome!</p>
     </div>
-    <div class=”mfans” style=”color:blue”>
+    <div class="mfans">
       <p>Messi fans are like, “Messi is the most efficient and best player ever!”</p>
       <p>Messi is so humble and dominant on the field!</p>
       <p>Messi always wins the awards!</p>
     </div>
-    <p contenteditable=”true”>Write what you think of Ronaldo or Messi here!</p>
-    <p contenteditable=”true” dir=”rtl”>If you don’t like Ronaldo or Messi, type here and see how much sense you make by looking at how you type! You can’t even punctuate correctly!</p>
+	<hr>
+    <p>Write what you think of Ronaldo or Messi here! (spellcheck included)</p>
+	<p contenteditable="true" spellcheck="true"><input type="text" placeholder="Type Here"></p>
+    <p>If you don’t like Ronaldo or Messi, type here and see how much sense you make by looking at how you type! You can’t even punctuate correctly!</p>
+	<p contenteditable="true" dir="rtl"><input type="text" placeholder="Type Here"></p>
+	<hr>
     <p>If you HATE Ronaldo or Messi, type below to vent your (unqualified) opinion!</p>
-    <p>Type below here:</p>
-    <p contenteditable=”true” hidden>Type here</p>
-    <p contenteditable=”true” id=”fanmessage”>Type a message for Ronaldo or Messi here!</p>
+    <p>Type below here: (Hint: You can't because it's hidden!)</p>
+    <p contenteditable="true" hidden>Type here</p>
+	<hr>
+	<p>Ronaldo says:</p>
+	<p lang="pt">Obrigado!</p>
+	<hr>
+	<p style="color:green">Here's a secret! Click the first link, then press back in your browser, and tab to see my order of best player to worst (Best player will be highlighted first)</p>
+	<a href="https://www.google.com" tabindex="1">First link</a><br>
+	<a href="https://en.wikipedia.org/wiki/Cristiano_Ronaldo" tabindex="3">Ronaldo</a><br>
+	<a href="https://en.wikipedia.org/wiki/Lionel_Messi" tabindex="2">Messi</a>
   </body>
 </html>
