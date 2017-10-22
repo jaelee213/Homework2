@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  
+
 <head>
   <meta charset="UTF-8">
   <meta name="authors" content="Andy Kong, Jae Hyun Lee, Min Chang Kim">
@@ -10,7 +10,7 @@
 <body onload="onLoadFunction()">
   <h1> Events Fun </h1>
     <p>**There is an image that can't be loaded for onerror purposes**</p>
-    <img src="andyiscool.jpg" onerror="onErrorFunction()">
+    <img src="andyiscool.jpg" onerror="onErrorFunction()" alt="andyiscool image does not exist..">
     <p>Favorite Soccer Player: <input type="text" id="favorite" onblur="onBlurFunction()"></p>
     <p>Favorite Sports Team:</p>
     <select id="teamSelect" onchange="onChangeFunction()">
@@ -35,14 +35,13 @@
       CLICK ON THIS TEXT. (onmousedown and onmouseup)
     </h4>
     <p> Best Soccer Player (Hover over pic and keep your mouse on pic until after the first alert)</p>
-    <img src="../img/ronaldo.jpg" onmouseenter="onmouseEnterFunction(this)" onmouseleave="onmouseLeaveFunction(this)" width="100px" height="100px" alt="ronaldo">
+    <img src="../img/ronaldo.jpg" onmouseenter="onmouseEnterFunction(this)" onmouseleave="onmouseLeaveFunction(this)" width="100" height="100" alt="ronaldo">
     <p> Move Mouse Over Box </p> <p id="coordinates"> </p>
     <canvas width="300" height="300" style="border:1px solid" onmousemove="onmouseMoveFunction(event)" onmouseout="onmouseOutFunction()"></canvas>
     <h3> Hover Over The GOAT in soccer </h3>
     <img src="../img/messi.jpg" onmouseover="OnMouseOverFunction()" width="100" height="100" alt="messi">
-    <div id="wheelTest" onmousewheel="onMouseWheelFunction()">
-      <h2> Scroll your mouse over me! </h2>
-    </div>
+    <h2> Scroll Your Mouse over Neymar Jr. </h2>
+    <img id="wheelTest" src="../img/neymarjr.jpg" onmousewheel="onMouseWheelFunction()">
     <form onreset="onResetFunction()" onsubmit="onSubmitFunction()">
       <input type="reset">
       <input type="submit">
