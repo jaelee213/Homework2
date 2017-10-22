@@ -5,6 +5,11 @@
   <meta charset="UTF-8">
   <meta name="authors" content="Andy Kong, Jae Hyun Lee, Min Chang Kim">
   <title>Events</title>
+  <style>
+  #wheelTest {
+    border: 1px solid black;
+  }
+</style>
 </head>
 
 <body onload="onLoadFunction()">
@@ -41,9 +46,7 @@
     <h3> Hover Over The GOAT in soccer </h3>
     <img src="../img/messi.jpg" onmouseover="OnMouseOverFunction()" width="100" height="100" alt="messi">
     <h2> Scroll Your Mouse wheel over this text area </h2>
-    <textarea id="wheelTest" onmousewheel="onMouseWheelFunction()">
-      Scroll your mouse wheel over me!
-    </textarea>
+    <div id="wheelTest" onmousewheel="onMouseWheelFunction()"> Roll Your Mouse Over Me </div>
     <form onreset="onResetFunction()" onsubmit="onSubmitFunction()">
       <input type="reset">
       <input type="submit">
@@ -144,7 +147,7 @@
       }
 
       function onMouseWheelFunction() {
-        document.getElementById('wheelTest').style.fontsize = "300px";
+        document.getElementById('wheelTest').style.fontsize = "75px";
         eventAlert("onMouseWheel");
       }
 
