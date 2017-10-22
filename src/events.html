@@ -1,14 +1,171 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
+  
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="1504.83">
-  <style type="text/css">
-  </style>
+  <meta charset="UTF-8">
+  <meta name="authors" content="Andy Kong, Jae Hyun Lee, Min Chang Kim">
+  <title>Events</title>
 </head>
-<body>
+
+<body onload="onLoadFunction()">
+  <h1> Events Fun </h1>
+    <p>**There is an image that can't be loaded for onerror purposes**</p>
+    <img src="andyiscool.jpg" onerror="onErrorFunction()">
+    <p>Favorite Soccer Player: <input type="text" id="favorite" onblur="onBlurFunction()"></p>
+    <p>Favorite Sports Team:</p>
+    <select id="teamSelect" onchange="onChangeFunction()">
+      <option value="Manchester United">Manchester United</option>
+      <option value="Barcelona">Barcelona</option>
+      <option value="LA Galaxy">LA Galaxy</option>
+    </select>
+    <p id="changeResult"></p>
+    <button onclick="onClickFunction()">Fun Button</button>
+    <button ondblclick="onDblClickFunction()">Double Click Button</button>
+    <p>Favorite Cat Species: <input type="text" onfocus="onFocusFunction(this)"></p>
+    <p>Favorite Cat Cartoon Charcter: <input id="in" type="text" oninput="onInputFunction()"></p>
+    <p id="oninputExample"></p>
+    <form>
+      Country: <input type="text" oninvalid="alert('Input cannot be empty. OnInvalid Fired')" required>
+      <input type="submit" value = "Submit">
+    </form>
+    <p>Favorite Soccer Field(onkeydown): <input type="text" onkeydown="onKeyDownFunction()"></p>
+    <p>Favorite Soccer Coach(onkeypress): <input type="text" onkeypress="onKeyPressFunction()"></p>
+    <p>Favorite Soccer League(onkeyup): <input type="text" id="keyUp" onkeyup="onKeyUpFunction()"></p>
+    <h4 id="clickText" onmousedown="onMouseDownFunction()">
+      CLICK ON THIS TEXT. (onmousedown and onmouseup)
+    </h4>
+    <p> Best Soccer Player (Hover over pic and keep your mouse on pic until after the first alert)</p>
+    <img src="../img/ronaldo.jpg" onmouseenter="onmouseEnterFunction(this)" onmouseleave="onmouseLeaveFunction(this)" width="100px" height="100px" alt="ronaldo">
+    <p> Move Mouse Over Box </p> <p id="coordinates"> </p>
+    <canvas width="300" height="300" style="border:1px solid" onmousemove="onmouseMoveFunction(event)" onmouseout="onmouseOutFunction()"></canvas>
+    <h3> Hover Over The GOAT in soccer </h3>
+    <img src="../img/messi.jpg" onmouseover="OnMouseOverFunction()" width="100" height="100" alt="messi">
+    <div id="wheelTest" onmousewheel="onMouseWheelFunction()">
+      <h2> Scroll your mouse over me! </h2>
+    </div>
+    <form onreset="onResetFunction()" onsubmit="onSubmitFunction()">
+      <input type="reset">
+      <input type="submit">
+    </form>
+    <h5>Scroll in textarea </h5>
+    <textarea onscroll="onScrollFunction()">
+      Forward World Cup center-half UEFA European Championship four-four-two red card chip upper 90 number 10 three-five-two defender hat trick one-two goal African Cup of Nations. Striker pitch hat trick goal midfielder referee one-two upper 90 defender World Cup red card yellow card African Cup of Nations. Midfielder red card one-two UEFA European Championship referee forward upper 90 goal brace three-five-two goalie four-four-two defender striker hat trick chip. Upper 90 four-four-two UEFA European Championship World Cup goalie midfielder referee center-half number 10 halftime one-two brace ball chip striker soccer yellow card.
+
+      Goal World Cup UEFA European Championship four-four-two chip pitch one-two center-half three-five-two hat trick soccer forward African Cup of Nations. Center-half soccer four-four-two World Cup forward number 10 yellow card referee defender brace goalie upper 90 chip one-two hat trick goal striker.
+    </textarea>
+    <p> Highlight the following text: <input type="text" value="Soccer is fun!" onselect="onSelectFunction()" readonly>
+
+    <script>
+      function onBlurFunction() {
+        var fav = document.getElementById("favorite");
+        fav.value = "MESSI";
+        eventAlert("onBlur");
+      }
+
+      function onChangeFunction(){
+        var x = document.getElementById('teamSelect').value;
+        document.getElementById('changeResult').innerHTML = "Team: " + x;
+        eventAlert("onChange");
+      }
+
+      function onClickFunction(){
+        eventAlert("onClick");
+      }
+
+      function onDblClickFunction(){
+        eventAlert("onDblClick");
+      }
+
+      function onErrorFunction(){
+        eventAlert("Image cannot be loaded. onError");
+      }
+
+      function onFocusFunction(x){
+        x.style.background = "yellow";
+        eventAlert("(Press tab a few times) onFocus");
+      }
+
+      function onInputFunction() {
+          var a = document.getElementById('in').value;
+          document.getElementById('oninputExample').innerHTML = "Your input is :" + a;
+          eventAlert("OnInput");
+      }
+
+      function onKeyDownFunction() {
+        eventAlert("Key pressed in Fav Soccer Field. onKeyDown");
+      }
+
+      function onKeyPressFunction() {
+        eventAlert("Key pressed in Favorite Soccer Coach. onKeyPress");
+      }
+
+      function onKeyUpFunction() {
+        var x = document.getElementById("keyUp");
+        x.value = x.value.toUpperCase();
+        eventAlert("Key Released in Favorite Soccer League. onKeyUp");
+      }
+
+      function onLoadFunction() {
+        eventAlert("OnLoad");
+      }
+      function onMouseDownFunction() {
+        document.getElementById('clickText').style.color = "blue";
+        eventAlert("onMouseDown");
+      }
+
+      function onmouseEnterFunction(x) {
+        x.style.height = "200px";
+        x.style.width = "200px";
+        eventAlert("onmouseOver");
+      }
+
+      function onmouseLeaveFunction(x) {
+        x.style.height = "100px";
+        x.style.width = "100px";
+        eventAlert("onmouseLeave");
+      }
+
+      function onmouseMoveFunction(e) {
+        var x = e.clientX;
+        var y = e.clientY;
+        var coor = "You are on (" + x + "," + y + ")";
+        document.getElementById('coordinates').innerHTML = coor;
+        eventAlert("onMouseMove");
+      }
+
+      function onmouseOutFunction() {
+        document.getElementById('coordinates').innerHTML = "";
+        eventAlert("onMouseOut");
+      }
+
+      function OnMouseOverFunction(x) {
+        eventAlert("onMouseOver");
+      }
+
+      function onMouseWheelFunction() {
+        document.getElementById('wheelTest').style.fontsize = "300px";
+        eventAlert("onMouseWheel");
+      }
+
+      function onResetFunction() {
+        eventAlert("onReset");
+      }
+
+      function onScrollFunction() {
+        eventAlert("onScroll");
+      }
+
+      function onSelectFunction() {
+        eventAlert("onSelect");
+      }
+
+      function onSubmitFunction() {
+        eventAlert("onSubmit");
+      }
+
+      function eventAlert(str) {
+          alert(str.concat(" Fired"));
+      }
+    </script>
 </body>
 </html>
