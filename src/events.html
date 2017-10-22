@@ -40,8 +40,10 @@
     <canvas width="300" height="300" style="border:1px solid" onmousemove="onmouseMoveFunction(event)" onmouseout="onmouseOutFunction()"></canvas>
     <h3> Hover Over The GOAT in soccer </h3>
     <img src="../img/messi.jpg" onmouseover="OnMouseOverFunction()" width="100" height="100" alt="messi">
-    <h2> Scroll Your Mouse over Neymar Jr. </h2>
-    <img id="wheelTest" src="../img/neymarjr.jpg" onmousewheel="onMouseWheelFunction()">
+    <h2> Scroll Your Mouse wheel over this text area </h2>
+    <textarea id="wheelTest" onmousewheel="onMouseWheelFunction()">
+      Scroll your mouse wheel over me!
+    </textarea>
     <form onreset="onResetFunction()" onsubmit="onSubmitFunction()">
       <input type="reset">
       <input type="submit">
