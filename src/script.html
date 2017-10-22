@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="authors" content="Andy Kong, Jae Hyun Lee, Min Chang Kim">
+  <title>Script</title>
+</head>
+
+<body>
+  <h1> Fun With Soccer! <small>And scipts..</small>
+  <br></br>
+  <script>
+    document.write("Soccer is Fun");
+  </script>
+  <noscript> Too bad you don't know how fun soccer is because your browser doesn't support javascript</noscript>
+  <br></br>
+  <h2> Fun with more Soccer!<small>And templates..</small>
+  <template id="temp">
+    <p>Soccer is better than cats!</p>
+  </template>
+  <div id="content">
+    <p> Whats better, Cats or Soccer?</p>
+  </div>
+  <button onclick="templateUser()" id="answer"> Get Answer</button>
+  <script>
+    function templateUser() {
+      var template = document.getElementById('temp');
+      var cont = document.getElementById('content');
+      var tem = temp.content.cloneNode(true);
+      cont.appendChild(tem);
+      var btn = document.getElementById('answer').disabled=true;
+    }
+  </script>
+  <h3>Soccer Ball on Canvas</h3>
+  <canvas id="ball" width="300" height="300" style="border:1px solid">
+  </canvas>
+  <script>
+    var canvas = document.getElementById('ball');
+    var ctx = canvas.getContext("2d");
+    ctx.beginPath();
+    ctx.arc(150,150,100,0,2*Math.PI);
+    ctx.stroke();
+
+    var can = document.getElementById('ball');
+    var context = canvas.getContext("2d");
+    context.beginPath();
+    context.arc(100,100,30,0,2*Math.PI);
+    context.fillStyle = "black";
+    context.fill();
+
+    var can = document.getElementById('ball');
+    var context = canvas.getContext("2d");
+    context.beginPath();
+    context.arc(200,100,30,0,2*Math.PI);
+    context.fillStyle = "black";
+    context.fill();
+
+    var can = document.getElementById('ball');
+    var context = canvas.getContext("2d");
+    context.beginPath();
+    context.arc(150,200,30,0,2*Math.PI);
+    context.fillStyle = "black";
+    context.fill();
+  </script>
+
+</body>
+</html>
