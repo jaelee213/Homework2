@@ -17,8 +17,6 @@
         <li>We did acknowledge that MathML allows you to write more complex math terms (such as the square root of a number) but overall, we thought that the "p" tag would have done just the same as writing a math equation out in MathML.</li>
       </ul>
     </li>
-    <hr>
-
     <li><strong>object tag</strong>
       <ul>
         <li>We thought it was cool how a video tag and embed tag can be written in the form of an object tag.</li>
@@ -26,16 +24,12 @@
         <li>Still very interesting, nonetheless, that some tags are interchangeable (but of course, with different syntax and parameters for each tag).</li>
       </ul>
     </li>
-    <hr>
-
     <li><strong>section tag</strong>
       <ul>
         <li>We were never aware of a "section" tag and because it didn't visually show any changes, we were confused of its intent at first.</li>
         <li>However, we realized that it was part of an organizational tool for people to not only write clearer code, but for people to be able to understand sections of code more clearly.</li>
       </ul>
     </li>
-    <hr>
-    
     <li><strong>link and "a" tag</strong>
       <ul>
         <li>This was one of the more confusing (and took some time to understand) tags because of their similarity in linking resources to the web page.</li>
@@ -43,16 +37,12 @@
         <li>Side note: We never knew that the "a" tag allowed for in-page navigation, which was pretty cool to learn.</li>
       </ul>
     </li>
-    <hr>    
-
     <li><strong>bdi Tag</strong>
       <ul>
         <li>The bdi tag is not supported by all browsers.</li>
         <li>After some research, it seems that this is so because the bdi tag does not inherit from the parent element like all the other elements.</li>
       </ul>
     </li>
-    <hr>
-    
     <li><strong>onMouseWheelFunction()</strong>
       <ul>
         <li>Our group had a long fight with trying to validate the onMouseWheelFunction() but after many efforts, we couldn't and the conclusion was that it was because the function is now deprecated.</li>
@@ -60,8 +50,6 @@
         <li>In conclusion, we agreed that onMouseWheelFunction() will produce a validation error because it is deprecated.</li>
       </ul>
     </li>
-    <hr>
-    
     <li><strong>keygen tag</strong>
       <ul>
         <li>Upon using this tag, our group did a little research and we found that:
@@ -73,16 +61,27 @@
         </li>
       </ul>
     </li>
-    <hr>
-    
-    <li><strong></strong></li>
-    <hr>
-    
-    <li><strong></strong></li>
-    <hr>
-    
-    <li><strong></strong></li>
-    <hr>
+    <li><strong>dir attribute</strong>
+      <ul>
+        <li>Setting the "dir" attribute to "rtl" (right-to-left) seemingly makes it so that strings of letters are written normally (and placed on the right), but non-letter characters (along with the cursor) are placed on the left. </li>
+        <li>As we were working with this attribute, we found that the behavior was a bit strange, yet interesting.</li>
+      </ul>
+    </li>
+    <li><strong>accesskey attribute</strong>
+      <ul>
+        <li>According to the documentation, the "accesskey" attribute simply states that we bind a key to something like a link in which the link would be opened if the user presses the specified key.</li>
+        <li>However, Chrome/IE/Opera require shift to be pressed along with the specified key and FireFox requires alt and shift to be pressed too.</li>
+        <li>It is interesting to think about why this is the case that different browsers need different actions for the same attribute which would be used the same way in a web page.</li>
+      </ul>
+    </li>
+    <li><strong>hidden attribute</strong>
+      <ul>
+        <li>One could have an expectation that the "hidden" attribute would replace text or even a block with whitespace that could be accessed in a discrete way on a web page.</li>
+        <li>However, when we tested the hidden attribute it seemed to not even have the element on the page at all ("hidden" in the code, but not on the page).</li>
+        <li>We came to this conclusion by using hidden with a p element and what we found was that no space was set aside for the hidden element at all.</li>
+        <li>This attribute might have a more advanced usage that our group did not happen across.</li>
+      </ul>
+    </li>
   </ol>
 </body>
 </html>
